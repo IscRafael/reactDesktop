@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add any additional custom styles below */
+.resize-handle-e,
+.resize-handle-w {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: ew-resize;
+}
+
+.resize-handle-s,
+.resize-handle-n {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  cursor: ns-resize;
+}
+
+.resize-handle-se,
+.resize-handle-sw,
+.resize-handle-ne,
+.resize-handle-nw {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.resize-handle-e { right: 0; }
+.resize-handle-w { left: 0; }
+.resize-handle-s { bottom: 0; }
+.resize-handle-n { top: 0; }
+.resize-handle-se { bottom: 0; right: 0; cursor: se-resize; }
+.resize-handle-sw { bottom: 0; left: 0; cursor: sw-resize; }
+.resize-handle-ne { top: 0; right: 0; cursor: ne-resize; }
+.resize-handle-nw { top: 0; left: 0; cursor: nw-resize; }
